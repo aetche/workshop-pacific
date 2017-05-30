@@ -1,0 +1,12 @@
+@import "variables";
+//enlaces
+
+@mixin enlaces($transform,$familia,$size,$color,$peso) {
+	text-decoration:none;
+	text-transform:$transform;
+	font-family:$familia;
+	font-size:$size;
+	color:$color;
+	font-weight:$peso;
+	letter-spacing: 0.08em;
+}

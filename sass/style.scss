@@ -1,0 +1,166 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+
+
+.item{
+	img{
+		width:100%;
+	}
+}
+
+header{
+	padding-top: 10px;
+	padding-bottom:40px;
+	div{ //container
+		.menu{
+			display: flex;
+ 			align-items: center;
+ 			padding: 15px 0;
+			div{
+				color: $principal;
+				a{
+					@include enlaces(uppercase,$textos,13px,$principal,700);
+					letter-spacing: 0;
+					vertical-align: 40%;
+					padding-left: 5px;
+				}
+				.cad {
+					a{
+						border:1px solid $principal;
+						padding: 3px;
+					}	
+				}
+			}
+		}
+		ul{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding-top:15px;
+			padding-bottom:30px;
+			li a{
+				@include enlaces(capitalize,$textos,16px,$principal,700);
+				letter-spacing: 0;
+			}
+			.dropdown .btn{
+				background:none;
+				@include enlaces(capitalize,$textos,16px,$principal,700);
+				letter-spacing: 0;
+				.caret {
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+
+}
+
+.carousel{
+	.carousel-caption{
+		top:35%;
+		h4{
+			@include enlaces(uppercase,$textos,18px,white,100);	
+			text-shadow: none;
+			//letter-spacing: 0.1em;
+		}
+		h2{
+			@include enlaces(uppercase,$titulos,46px,white,bold);	
+			padding: 18px 0;
+			text-shadow: none;
+			//letter-spacing: 0.1em;
+		}
+	}
+
+}
+
+section{
+		border-top: 1px solid $claro;
+		border-bottom: 1px solid $claro;
+		padding: 40px 0;
+		.articulos h3{
+		@include enlaces(uppercase,$titulos,20px,white,bold);	
+		position: relative;
+		bottom: 130px;
+		text-align: center;
+		//letter-spacing: 0.1em;
+		}
+
+		h3{
+			@include enlaces(uppercase,$titulos,18px,$principal,bold);	
+			padding:10px 0;
+		}
+
+		h2{
+			@include enlaces(uppercase,$textos,15px,$claro,100);	
+			padding:10px 0;
+			text-align: center;	
+		}
+		p{	
+			padding: 15px 0;
+			@include enlaces(none,$textos,15px,$principal,100);	
+			letter-spacing: 0;
+		}
+
+		.featured {
+			h2{
+				color: $principal;
+				font-size: 12px;
+				letter-spacing: 0;
+			}
+			h3{
+				text-align:center;
+			}
+			div{
+				@include enlaces(uppercase,$textos,15px,$principal,100);	
+				text-align: center;
+			}
+			.precioviejo {
+				text-decoration: line-through;
+				color: $claro;
+			}
+			.sale{
+				display: none;
+				background:#545b72;
+				color: white;
+				border-radius:0;
+				font-size: 12px;
+				position: relative;
+				bottom: 130px;
+				left: 100px;
+			}
+			div:last-child{
+				.sale{
+					display: inline-block;
+				}
+			}
+
+		}
+		.journal{
+			a{
+				text-decoration: none;
+				@include enlaces(uppercase,$textos,12px,$principal,100);	
+				letter-spacing: 0;
+			}
+		}
+		
+}
+
+/*
+@media only screen and (max-width: 768px) {
+    .menu {
+    	flex-direction: column;
+        background-color: lightblue;
+        img{
+        	order:-1;
+        }
+    }
+    .menu2 {
+    	flex-direction: column;
+        background-color: lightblue;
+        img{
+        	order:-1;
+        }
+    }
+}
+*/
